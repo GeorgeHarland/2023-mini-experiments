@@ -1,0 +1,27 @@
+# Node.js related
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Babel related
+dist/
+babel-out/
+.cache/
+
+# Environment config
+.env
+.env.local
+
+# OS related
+.DS_Store
+Thumbs.db
+
+# Jest related
+coverage/
+jest.config.js
+jest.setup.js
+
+# Potential Jest cache directories
+jest-cache/
+node_modules/.cache/jest/
+
