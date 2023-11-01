@@ -24,4 +24,3 @@ jest.setup.js
 # Potential Jest cache directories
 jest-cache/
 node_modules/.cache/jest/
-
