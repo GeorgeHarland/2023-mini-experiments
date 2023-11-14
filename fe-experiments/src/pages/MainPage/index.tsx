@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import GlowingButton from "../../components/glowingButton";
 import * as S from "./styled";
 import Particle from "../../components/cursorParticle";
+import FadeInButton from "../../components/FadeInButton";
 
 type ParticleType = {
   style: {
@@ -39,10 +40,13 @@ const MainPage = () => {
   }, []);
 
   return <S.Wrapper>
-    <GlowingButton />
     {particles.map(particle => (
       <Particle key={particle.id} style={particle.style} />
-    ))}
+    ))} 
+    <div style={{'display': 'flex', 'flexDirection': 'column'}}>
+      <GlowingButton />
+      <FadeInButton />
+    </div>
   </S.Wrapper>
 }
 
