@@ -43,10 +43,10 @@ const MainPage = () => {
     {particles.map(particle => (
       <Particle key={particle.id} style={particle.style} />
     ))} 
-    <div style={{'display': 'flex', 'flexDirection': 'column'}}>
+    <S.ButtonContainer>
       <GlowingButton />
       <FadeInButton />
-    </div>
+    </S.ButtonContainer>
   </S.Wrapper>
 }
 

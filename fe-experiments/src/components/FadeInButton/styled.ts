@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-const sparkle = keyframes`
+const fluctuateSize = keyframes`
   0% {
     transform: scale(1);
     opacity: 1;
@@ -17,7 +17,7 @@ const sparkle = keyframes`
 
 export const FadeInButton = styled.button`
   position: relative;
-  animation: ${sparkle} 2s ease infinite;
+  animation: ${fluctuateSize} 2s ease infinite;
   opacity: 0;
   cursor: pointer;
 `
