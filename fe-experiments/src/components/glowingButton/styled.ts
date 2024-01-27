@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const GlowingButton = styled.button`
   position: relative;
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  /* background: linear-gradient(45deg, #000000, #ffffff, #000000, #ffffff, #000000, #ffffff); */
   color: #000;
   font-size: 1.5em;
   letter-spacing: 0.1em;

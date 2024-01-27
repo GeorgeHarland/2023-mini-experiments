@@ -3,6 +3,7 @@ import GlowingButton from "../../components/glowingButton";
 import * as S from "./styled";
 import Particle from "../../components/cursorParticle";
 import FadeInButton from "../../components/FadeInButton";
+import MatrixCanvas from "../../components/matrixCanvas";
 
 type ParticleType = {
   style: {
@@ -22,7 +23,7 @@ const MainPage = () => {
           left: event.clientX,
           top: event.clientY
         },
-        id: Date.now() // unique identifier
+        id: Date.now()
       };
 
       setParticles(currentParticles => [...currentParticles, newParticle]);
@@ -31,7 +32,7 @@ const MainPage = () => {
         setParticles(currentParticles => 
           currentParticles.filter(particle => particle.id !== newParticle.id)
         );
-      }, 1000);
+      }, 5000);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -40,6 +41,7 @@ const MainPage = () => {
   }, []);
 
   return <S.Wrapper>
+    <MatrixCanvas />
     {particles.map(particle => (
       <Particle key={particle.id} style={particle.style} />
     ))} 
