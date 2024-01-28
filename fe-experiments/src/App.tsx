@@ -1,13 +1,20 @@
-import { BrowserRouter } from "react-router-dom"
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom"
 import MainPage from "./pages/MainPage"
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <MainPage />
+    },
+    {
+      path: '/2',
+      element: <Link to='/' style={{color: 'white', textDecoration: 'none'}}>Page 1</Link>
+    }
+  ])
+
   return (
-    <>
-      <BrowserRouter>
-        <MainPage />
-      </BrowserRouter>
-    </>
+    <RouterProvider router={router} />
   )
 }
 
