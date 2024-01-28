@@ -35,8 +35,8 @@ const MatrixCanvas = () => {
       
       for(let i = 0; i < rainArray.length; i++)
       {
-        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        context.fillText(text, i*fontSize, rainArray[i]*fontSize);
+        const randomChar = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        context.fillText(randomChar, i*fontSize, rainArray[i]*fontSize);
         
         if(rainArray[i]*fontSize > canvas.height && Math.random() > 0.975){
           rainArray[i] = 0;

@@ -4,6 +4,7 @@ import * as S from "./styled";
 import Particle from "../../components/cursorParticle";
 import FadeInButton from "../../components/FadeInButton";
 import MatrixCanvas from "../../components/matrixCanvas";
+import { Link } from "react-router-dom";
 
 type ParticleType = {
   style: {
@@ -40,16 +41,21 @@ const MainPage = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  return <S.Wrapper>
-    <MatrixCanvas />
-    {particles.map(particle => (
-      <Particle key={particle.id} style={particle.style} />
-    ))} 
-    <S.ButtonContainer>
-      <GlowingButton />
-      <FadeInButton />
-    </S.ButtonContainer>
-  </S.Wrapper>
+  return <>
+    <S.Row>
+    <Link to='/2' style={{color: 'white', textDecoration: 'none'}}>Page 2</Link>
+    </S.Row>
+    <S.Row>
+      <MatrixCanvas />
+      {particles.map(particle => (
+        <Particle key={particle.id} style={particle.style} />
+      ))} 
+      <S.ButtonContainer>
+        <GlowingButton />
+        <FadeInButton />
+      </S.ButtonContainer>
+    </S.Row>
+  </>
 }
 
 export default MainPage;

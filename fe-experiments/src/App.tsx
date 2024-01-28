@@ -1,9 +1,12 @@
+import { BrowserRouter } from "react-router-dom"
 import MainPage from "./pages/MainPage"
 
 function App() {
   return (
     <>
-      <MainPage />
+      <BrowserRouter>
+        <MainPage />
+      </BrowserRouter>
     </>
   )
 }
