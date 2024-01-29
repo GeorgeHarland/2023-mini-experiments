@@ -10,6 +10,10 @@ function App() {
     {
       path: '/2',
       element: <Link to='/' style={{color: 'white', textDecoration: 'none'}}>Page 1</Link>
+    },
+    {
+      path: '*',
+      element: <Link to='/' style={{color: 'white', textDecoration: 'none'}}>Not found. Click here to return to main page.</Link>
     }
   ])
 
